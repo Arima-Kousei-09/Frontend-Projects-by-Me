@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="profile.css">
+        <meta charset="UTF-8" />
+        <title>My Profile</title>
+    </head>
+    <body> 
+        <div class="container">
+            <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+        <h1>Hi, This is Bivangsu</h1>
+        <p>Hi, I'm Bivangsu Sinha — a problem solver, coder, and engineering student passionate about building and learning.</p>
+
+        <nav>
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#References">References</a></li>
+            </ul>
+        </nav>
+
+        <section id="About">
+            <h2>
+                My Achievements are Listed below:
+            </h2>
+
+            <p>I've participated in Multiple Debates and secured wins.</p>
+            <p>That includes:</p>
+            <ul>
+                <li>Finalist in Heritage Film Debate: "Charulotar Chorcha"</li>
+                <li>Special Mention in Xavrang '26</li>
+                <li>Winner of Debating Forum (Ashram)</li>     
+            </ul>
+            </section>
+        <section id="Projects">
+            <h2>
+                Projects Made by me:
+            </h2>
+            <ul>
+                <li>My Profile Card </li>
+                <li>A Login Page</li>
+            </ul>
+        </section>
+        <section id="References">
+            <h2>
+                You can Find me on: 
+            </h2>
+            <p><a href="https://www.linkedin.com/in/bivangsu-sinha-838625384/" target="_blank"><em>LinkedIn</em></a></p>
+            <p><a href="https://github.com/Arima-Kousei-09" target="_blank"><em>GitHub</em></a></p>
+            <p>Phone Number: +91 98324 54469</p>
+        </section>
+        </div>
+        <script>
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle("dark");
+
+const icon = document.querySelector(".theme-toggle");
+
+    if (body.classList.contains("dark")) {
+        icon.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+    } else {
+        icon.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+window.onload = function () {
+    const savedTheme = localStorage.getItem("theme");
+    const icon = document.querySelector(".theme-toggle");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        icon.textContent = "☀️";
+    } else {
+        icon.textContent = "🌙";
+    }
+};
+</script>
+
+    </body>
+</html>
