@@ -13,4 +13,4 @@ This is a simple personal portfolio website built using HTML, CSS, and basic Jav
 - JavaScript
 
 ## Author
-Bivangsu Sinha## Features
+Bivangsu Sinha
